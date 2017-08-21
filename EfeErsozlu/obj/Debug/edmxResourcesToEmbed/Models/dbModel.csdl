@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ETicaretDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ETicaretDbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ApiRegistration" EntityType="ETicaretDbModel.ApiRegistration" />
+    <EntitySet Name="Basket" EntityType="ETicaretDbModel.Basket" />
+    <EntitySet Name="Category" EntityType="ETicaretDbModel.Category" />
+    <EntitySet Name="Product" EntityType="ETicaretDbModel.Product" />
+    <AssociationSet Name="fk_BasketProductId" Association="ETicaretDbModel.fk_BasketProductId">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Basket" EntitySet="Basket" />
+    </AssociationSet>
+    <AssociationSet Name="fk_CategoryId" Association="ETicaretDbModel.fk_CategoryId">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ApiRegistration">
+    <Key>
+      <PropertyRef Name="ApiId" />
+    </Key>
+    <Property Name="ApiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ApiKey" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="TcNo" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+    <Property Name="Permission" Type="Int32" Nullable="false" />
+    <Property Name="FullName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Basket">
+    <Key>
+      <PropertyRef Name="BasketId" />
+    </Key>
+    <Property Name="BasketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BarketDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="BasketOkay" Type="Boolean" Nullable="false" />
+    <Property Name="BasketProductNumber" Type="Int32" Nullable="false" />
+    <Property Name="BasketTotalPrice" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="BasketProductId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="ETicaretDbModel.fk_BasketProductId" FromRole="Basket" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Product" Relationship="ETicaretDbModel.fk_CategoryId" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="ProductCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="ProdunctStock" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Basket" Relationship="ETicaretDbModel.fk_BasketProductId" FromRole="Product" ToRole="Basket" />
+    <NavigationProperty Name="Category" Relationship="ETicaretDbModel.fk_CategoryId" FromRole="Product" ToRole="Category" />
+  </EntityType>
+  <Association Name="fk_BasketProductId">
+    <End Type="ETicaretDbModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="ETicaretDbModel.Basket" Role="Basket" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="Basket">
+        <PropertyRef Name="BasketProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_CategoryId">
+    <End Type="ETicaretDbModel.Category" Role="Category" Multiplicity="1" />
+    <End Type="ETicaretDbModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

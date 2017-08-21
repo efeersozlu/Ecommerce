@@ -1,0 +1,100 @@
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\ApplicationInsights.config
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\csc.exe
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\System.Collections.Immutable.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\vbc.exe
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\VBCSCompiler.exe
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\roslyn\VBCSCompiler.exe.config
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.dll.config
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.pdb
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EntityFramework.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EntityFramework.SqlServer.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Web.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.WindowsServer.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.ApplicationInsights.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.Web.Infrastructure.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Helpers.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Mvc.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Razor.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Deployment.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Razor.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EntityFramework.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\EntityFramework.SqlServer.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Web.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.WindowsServer.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.ApplicationInsights.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Razor.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Deployment.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Razor.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Helpers.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\bin\System.Web.Mvc.xml
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.csprojResolveAssemblyReference.cache
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.dll
+c:\users\asus\documents\visual studio 2015\Projects\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.pdb
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\ApplicationInsights.config
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\csc.exe
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\vbc.exe
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\VBCSCompiler.exe
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.dll.config
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EfeErsozlu.pdb
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EntityFramework.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EntityFramework.SqlServer.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Web.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.ApplicationInsights.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Helpers.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Mvc.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Razor.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Deployment.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Razor.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EntityFramework.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\EntityFramework.SqlServer.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.Web.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.ApplicationInsights.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Razor.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Deployment.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Webpages.Razor.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Helpers.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\bin\System.Web.Mvc.xml
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.csprojResolveAssemblyReference.cache
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.dll
+C:\Users\pc\Desktop\EfeErsozlu\EfeErsozlu\obj\Debug\EfeErsozlu.pdb

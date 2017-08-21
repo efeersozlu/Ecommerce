@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EfeErsozlu.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Anasayfa</h2>
+<div>
+    <div style="float:left;">
+        @Html.Label("Kategori Seçin")
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+
+            @Html.DropDownList("CategoryId", (SelectList)ViewBag.Categories, new { onchange = "this.form.submit();" })
+        }
+
+    </div>
+
+    <div style="Float:left; background-color:aqua;">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProdunctStock)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category.CategoryName)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProdunctStock)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.CategoryName)
+                    </td>
+                    <td>
+
+                        <input type="button" value="Ürünü Gör" onclick="location.href='@Url.Action("ProductDetails","Home", new {id=item.ProductId})'" />
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div style="background-color:red;">
+            @ViewBag.Err
+        </div>
+    </div>
+</div>

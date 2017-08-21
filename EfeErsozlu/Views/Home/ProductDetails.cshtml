@@ -1,0 +1,59 @@
+﻿@model EfeErsozlu.Models.Product
+
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+
+
+<div>
+    <h4>>@ViewBag.pn</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProductPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdunctStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdunctStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category.CategoryName)
+        </dd>
+        <dt>
+            @Html.DisplayName("Üründen satılan adet:")
+        </dt>
+        <dd>
+            @ViewBag.total
+        </dd>
+        <dd>
+            @ViewBag.Err
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <input type="button" value="Sepete Ekle" onclick="location.href='@Url.Action("AddBasket","Home", new {id= Model.ProductId})'" />
+    @Html.ActionLink("Anasayfa", "Index")
+</p>

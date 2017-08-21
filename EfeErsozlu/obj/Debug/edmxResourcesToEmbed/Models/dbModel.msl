@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ETicaretDbModelStoreContainer" CdmEntityContainer="ETicaretDbEntities">
+    <EntitySetMapping Name="ApiRegistration">
+      <EntityTypeMapping TypeName="ETicaretDbModel.ApiRegistration">
+        <MappingFragment StoreEntitySet="ApiRegistration">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Permission" ColumnName="Permission" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="ApiKey" ColumnName="ApiKey" />
+          <ScalarProperty Name="ApiId" ColumnName="ApiId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Basket">
+      <EntityTypeMapping TypeName="ETicaretDbModel.Basket">
+        <MappingFragment StoreEntitySet="Basket">
+          <ScalarProperty Name="BasketProductId" ColumnName="BasketProductId" />
+          <ScalarProperty Name="BasketTotalPrice" ColumnName="BasketTotalPrice" />
+          <ScalarProperty Name="BasketProductNumber" ColumnName="BasketProductNumber" />
+          <ScalarProperty Name="BasketOkay" ColumnName="BasketOkay" />
+          <ScalarProperty Name="BarketDate" ColumnName="BarketDate" />
+          <ScalarProperty Name="BasketId" ColumnName="BasketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="ETicaretDbModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="ETicaretDbModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProdunctStock" ColumnName="ProdunctStock" />
+          <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+          <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

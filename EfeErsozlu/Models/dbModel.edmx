@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ETicaretDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ApiRegistration">
+          <Key>
+            <PropertyRef Name="ApiId" />
+          </Key>
+          <Property Name="ApiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApiKey" Type="nvarchar" MaxLength="600" Nullable="false" />
+          <Property Name="TcNo" Type="nvarchar" MaxLength="600" Nullable="false" />
+          <Property Name="Permission" Type="int" Nullable="false" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="400" />
+        </EntityType>
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BarketDate" Type="datetime" Nullable="false" />
+          <Property Name="BasketOkay" Type="bit" Nullable="false" />
+          <Property Name="BasketProductNumber" Type="int" Nullable="false" />
+          <Property Name="BasketTotalPrice" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="BasketProductId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductPrice" Type="money" Nullable="false" />
+          <Property Name="ProductCategoryId" Type="int" Nullable="false" />
+          <Property Name="ProdunctStock" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_BasketProductId">
+          <End Role="Product" Type="Self.Product" Multiplicity="1" />
+          <End Role="Basket" Type="Self.Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="BasketProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_CategoryId">
+          <End Role="Category" Type="Self.Category" Multiplicity="1" />
+          <End Role="Product" Type="Self.Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ETicaretDbModelStoreContainer">
+          <EntitySet Name="ApiRegistration" EntityType="Self.ApiRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Basket" EntityType="Self.Basket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_BasketProductId" Association="Self.fk_BasketProductId">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_CategoryId" Association="Self.fk_CategoryId">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ETicaretDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="ETicaretDbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ApiRegistration" EntityType="ETicaretDbModel.ApiRegistration" />
+          <EntitySet Name="Basket" EntityType="ETicaretDbModel.Basket" />
+          <EntitySet Name="Category" EntityType="ETicaretDbModel.Category" />
+          <EntitySet Name="Product" EntityType="ETicaretDbModel.Product" />
+          <AssociationSet Name="fk_BasketProductId" Association="ETicaretDbModel.fk_BasketProductId">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="Basket" EntitySet="Basket" />
+          </AssociationSet>
+          <AssociationSet Name="fk_CategoryId" Association="ETicaretDbModel.fk_CategoryId">
+            <End Role="Category" EntitySet="Category" />
+            <End Role="Product" EntitySet="Product" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ApiRegistration">
+          <Key>
+            <PropertyRef Name="ApiId" />
+          </Key>
+          <Property Name="ApiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApiKey" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="TcNo" Type="String" Nullable="false" MaxLength="600" FixedLength="false" Unicode="true" />
+          <Property Name="Permission" Type="Int32" Nullable="false" />
+          <Property Name="FullName" Type="String" MaxLength="400" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Basket">
+          <Key>
+            <PropertyRef Name="BasketId" />
+          </Key>
+          <Property Name="BasketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BarketDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="BasketOkay" Type="Boolean" Nullable="false" />
+          <Property Name="BasketProductNumber" Type="Int32" Nullable="false" />
+          <Property Name="BasketTotalPrice" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="BasketProductId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Product" Relationship="ETicaretDbModel.fk_BasketProductId" FromRole="Basket" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Product" Relationship="ETicaretDbModel.fk_CategoryId" FromRole="Category" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="ProductId" />
+          </Key>
+          <Property Name="ProductId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProductPrice" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="ProductCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="ProdunctStock" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Basket" Relationship="ETicaretDbModel.fk_BasketProductId" FromRole="Product" ToRole="Basket" />
+          <NavigationProperty Name="Category" Relationship="ETicaretDbModel.fk_CategoryId" FromRole="Product" ToRole="Category" />
+        </EntityType>
+        <Association Name="fk_BasketProductId">
+          <End Type="ETicaretDbModel.Product" Role="Product" Multiplicity="1" />
+          <End Type="ETicaretDbModel.Basket" Role="Basket" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="ProductId" />
+            </Principal>
+            <Dependent Role="Basket">
+              <PropertyRef Name="BasketProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_CategoryId">
+          <End Type="ETicaretDbModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="ETicaretDbModel.Product" Role="Product" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Category">
+              <PropertyRef Name="CategoryId" />
+            </Principal>
+            <Dependent Role="Product">
+              <PropertyRef Name="ProductCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ETicaretDbModelStoreContainer" CdmEntityContainer="ETicaretDbEntities">
+          <EntitySetMapping Name="ApiRegistration">
+            <EntityTypeMapping TypeName="ETicaretDbModel.ApiRegistration">
+              <MappingFragment StoreEntitySet="ApiRegistration">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Permission" ColumnName="Permission" />
+                <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+                <ScalarProperty Name="ApiKey" ColumnName="ApiKey" />
+                <ScalarProperty Name="ApiId" ColumnName="ApiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Basket">
+            <EntityTypeMapping TypeName="ETicaretDbModel.Basket">
+              <MappingFragment StoreEntitySet="Basket">
+                <ScalarProperty Name="BasketProductId" ColumnName="BasketProductId" />
+                <ScalarProperty Name="BasketTotalPrice" ColumnName="BasketTotalPrice" />
+                <ScalarProperty Name="BasketProductNumber" ColumnName="BasketProductNumber" />
+                <ScalarProperty Name="BasketOkay" ColumnName="BasketOkay" />
+                <ScalarProperty Name="BarketDate" ColumnName="BarketDate" />
+                <ScalarProperty Name="BasketId" ColumnName="BasketId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="ETicaretDbModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="ETicaretDbModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ProdunctStock" ColumnName="ProdunctStock" />
+                <ScalarProperty Name="ProductCategoryId" ColumnName="ProductCategoryId" />
+                <ScalarProperty Name="ProductPrice" ColumnName="ProductPrice" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

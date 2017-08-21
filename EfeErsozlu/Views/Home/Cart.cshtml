@@ -1,0 +1,51 @@
+﻿@model IEnumerable<EfeErsozlu.Models.Basket>
+
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Sepetim</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BarketDate)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.BasketProductNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BasketTotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.BarketDate)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.BasketProductNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BasketTotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.ProductName)
+            </td>
+            <td>
+                <input type="button" value="Ürünü çıkar" onclick="location.href='@Url.Action("DeleteProduct","Home", new {id=item.BasketProductId})'" />
+            </td>
+        </tr>
+    }
+
+</table>
+<input type="button" value="Satın Al" onclick="location.href='@Url.Action("BuyProducts", "Home")'" />
